@@ -4,7 +4,7 @@ import UIKit
 // Написать функцию, которая определяет, четное число или нет.
 
 func isEven(number: Int) -> Bool {
-  return number % 2 == 0
+number % 2 == 0
 }
 
 isEven(number: 5)
@@ -13,7 +13,7 @@ isEven(number: 5)
 // Написать функцию, которая определяет, делится ли число без остатка на 3.
 
 func isThird(number: Int) -> Bool {
-  return number % 3 == 0
+number % 3 == 0
 }
 
 isThird(number: 99)
@@ -29,9 +29,10 @@ print(newArray)
 // Задача 4.
 // Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 
-var cleanArray = newArray.filter {$0 % 2 != 0 && $0 % 3 != 0}
+var cleanArray = newArray.filter {!isEven(number: $0) && !isThird(number: $0)}
 
 print(cleanArray)
+
 
 // Задача 5.
 //* Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 50 элементов.
